@@ -18,7 +18,7 @@ import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
 import org.jboss.jandex.Main;
-import prati_sgcq.dao.AcessoDAO;
+import prati_sgcq.dao.RegraAcessoDAO;
 import prati_sgcq.dao.FalhaAcessoDAO;
 import prati_sgcq.dao.SistemaDAO;
 import prati_sgcq.model.FalhaAcesso;
@@ -57,7 +57,6 @@ public class FrmLogin extends javax.swing.JFrame {
 //            setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
 //            System.exit(0);
 //        }
-        System.out.println("Senha: " + Cript.SHA("123"));
     }
 
     /**
@@ -387,7 +386,7 @@ public class FrmLogin extends javax.swing.JFrame {
     public void acessarSistema() {
         Usuario user = new Usuario();
         UsuarioDAO userDAO = new UsuarioDAO();
-        AcessoDAO regraAcessoDAO = new AcessoDAO();
+        RegraAcessoDAO regraAcessoDAO = new RegraAcessoDAO();
         FalhaAcessoDAO falhaAcessoDAO = new FalhaAcessoDAO();
         if ("".equals(txtUsuario.getText().toLowerCase()) || "".equals(txtSenha.getText())) {
             userSenhaInvalidos("Usuário ou Senha inválidos");

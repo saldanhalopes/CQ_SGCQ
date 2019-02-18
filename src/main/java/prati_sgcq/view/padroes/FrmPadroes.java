@@ -1,4 +1,4 @@
-package prati_sgcq.view;
+package prati_sgcq.view.padroes;
 
 import java.awt.Cursor;
 import java.awt.Image;
@@ -16,6 +16,7 @@ import prati_sgcq.dao.PadroesConfigDAO;
 import prati_sgcq.dao.PadroesDAO;
 import prati_sgcq.model.Padroes;
 import prati_sgcq.model.PadroesConfig;
+import prati_sgcq.view.FrmSalvar;
 
 
 /**

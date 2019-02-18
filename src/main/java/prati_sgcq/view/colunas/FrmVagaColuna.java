@@ -1,4 +1,4 @@
-package prati_sgcq.view;
+package prati_sgcq.view.colunas;
 
 import java.util.ArrayList;
 import java.util.List;

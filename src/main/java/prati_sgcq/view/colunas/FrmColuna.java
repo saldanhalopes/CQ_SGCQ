@@ -1,4 +1,4 @@
-package prati_sgcq.view;
+package prati_sgcq.view.colunas;
 
 import java.sql.Timestamp;
 import java.awt.Cursor;
@@ -30,6 +30,8 @@ import prati_sgcq.model.Setor;
 import prati_sgcq.model.Usuario;
 import prati_sgcq.util.ComboBox;
 import prati_sgcq.util.DataHora;
+import prati_sgcq.view.FrmSalvar;
+import prati_sgcq.view.FrmSelecionaUsuario;
 
 /**
  *
@@ -99,7 +101,7 @@ public final class FrmColuna extends javax.swing.JFrame {
         jLabel25 = new javax.swing.JLabel();
         cmbPesquisarSetor = new javax.swing.JComboBox();
         jLabel13 = new javax.swing.JLabel();
-        cmbPesquisarStatus = new javax.swing.JComboBox<String>();
+        cmbPesquisarStatus = new javax.swing.JComboBox<>();
         btnImprimirRelatorio = new javax.swing.JButton();
         jLabel5 = new javax.swing.JLabel();
         cmbGaveta = new javax.swing.JComboBox();
@@ -378,7 +380,7 @@ public final class FrmColuna extends javax.swing.JFrame {
 
         jLabel13.setText("Status:");
 
-        cmbPesquisarStatus.setModel(new javax.swing.DefaultComboBoxModel(new String[] { "Todos", "Ativos", "Inativos", "s/ Performance" }));
+        cmbPesquisarStatus.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Todos", "Ativos", "Inativos", "s/ Performance" }));
         cmbPesquisarStatus.setSelectedIndex(1);
         cmbPesquisarStatus.addItemListener(new java.awt.event.ItemListener() {
             public void itemStateChanged(java.awt.event.ItemEvent evt) {

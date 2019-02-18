@@ -3,7 +3,7 @@
  * To change this template file, choose Tools | Templates
  * and open the template in the editor.
  */
-package prati_sgcq.view;
+package prati_sgcq.view.padroes;
 
 import javax.swing.table.DefaultTableModel;
 import prati_sgcq.dao.PadroesConfigDAO;

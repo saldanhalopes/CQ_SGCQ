@@ -64,8 +64,8 @@ public class UsuarioDAO extends GenenicoDAO<Usuario> {
             String update = "UPDATE Usuario u SET u.failed_access_count = :failed_access_count WHERE u.id = :id";
             em.createQuery(update)
                     .setParameter("failed_access_count", falha
-                                    ? (user.getFailed_access_count() == null ? 0
-                                            : user.getFailed_access_count()) + 1 : 0)
+                            ? (user.getFailed_access_count() == null ? 0
+                            : user.getFailed_access_count()) + 1 : 0)
                     .setParameter("id", user.getId())
                     .executeUpdate();
             em.getTransaction().commit();
@@ -163,7 +163,7 @@ public class UsuarioDAO extends GenenicoDAO<Usuario> {
             em.close();
         }
     }
-    
+
     public void atualizarTrocaSenha(Usuario user) throws TransactionRequiredException {
         EntityManager em = ConnectionFactory.em(true);
         try {
@@ -184,6 +184,19 @@ public class UsuarioDAO extends GenenicoDAO<Usuario> {
         } catch (TransactionRequiredException ex) {
             em.getTransaction().rollback();
             throw new TransactionRequiredException("Erro ao Atualizar!");
+        } finally {
+            em.close();
+        }
+    }
+
+    public static Boolean checkUserIsExits(Usuario user) throws EntityNotFoundException, NoResultException {
+        EntityManager em = ConnectionFactory.em(true);
+        try {
+            return em.createNamedQuery("Usuario.findByUsuario", Usuario.class)
+                    .setParameter("usuario", user.getUsuario())
+                    .getSingleResult().getId() > 0;
+        } catch (NoResultException  ex) {
+            return false;
         } finally {
             em.close();
         }

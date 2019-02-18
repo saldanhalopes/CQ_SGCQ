@@ -50,7 +50,6 @@ public class Acesso implements EntidadeBase, Serializable {
     public Acesso(Integer id) {
         this.id = id;
     }
-    
 
     @Override
     public Integer getId() {
@@ -60,8 +59,6 @@ public class Acesso implements EntidadeBase, Serializable {
     public void setId(Integer id) {
         this.id = id;
     }
-
-    
 
     public String getAcesso() {
         return acesso;

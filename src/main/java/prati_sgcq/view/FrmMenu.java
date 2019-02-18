@@ -1,17 +1,14 @@
 package prati_sgcq.view;
 
-import java.awt.AWTException;
+import prati_sgcq.view.colunas.FrmColuna;
+import prati_sgcq.view.padroes.FrmPadroes;
 import java.awt.Cursor;
 import java.awt.Image;
-import java.awt.SystemTray;
 import java.awt.Toolkit;
-import java.awt.TrayIcon;
-import java.awt.event.MouseEvent;
-import java.awt.event.MouseListener;
 import java.net.URL;
-import javax.swing.ImageIcon;
 import javax.swing.JFrame;
 import javax.swing.JOptionPane;
+import prati_sgcq.view.config.FrmMenuConfig;
 
 /**
  *
@@ -281,15 +278,10 @@ public class FrmMenu extends javax.swing.JFrame {
 
     private void btnConfigActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnConfigActionPerformed
         setCursor(Cursor.getPredefinedCursor(Cursor.WAIT_CURSOR));
-        Thread t1 = new Thread() {
-            @Override
-            public void run() {
-                FrmColuna frm = new FrmColuna();gfhf
-                frm.setVisible(true);
-            }
-        };
-        t1.start();
+        FrmMenuConfig frm = new FrmMenuConfig(null, true);
+        frm.setVisible(true);
         setCursor(Cursor.getPredefinedCursor(Cursor.DEFAULT_CURSOR));
+        //this.setState(JFrame.ICONIFIED);
     }//GEN-LAST:event_btnConfigActionPerformed
 
     /**
