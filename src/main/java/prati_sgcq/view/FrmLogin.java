@@ -17,7 +17,6 @@ import javax.persistence.TransactionRequiredException;
 import javax.swing.ImageIcon;
 import javax.swing.JDialog;
 import javax.swing.JOptionPane;
-import org.jboss.jandex.Main;
 import prati_sgcq.dao.RegraAcessoDAO;
 import prati_sgcq.dao.FalhaAcessoDAO;
 import prati_sgcq.dao.SistemaDAO;
@@ -117,6 +116,13 @@ public class FrmLogin extends javax.swing.JFrame {
 
         lblCapslock.setFont(new java.awt.Font("SansSerif", 1, 11)); // NOI18N
         lblCapslock.setForeground(new java.awt.Color(204, 0, 0));
+        lblCapslock.setText("asdfasdf");
+
+        jLayeredPane2.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(txtUsuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(txtSenha, javax.swing.JLayeredPane.DEFAULT_LAYER);
+        jLayeredPane2.setLayer(lblCapslock, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         javax.swing.GroupLayout jLayeredPane2Layout = new javax.swing.GroupLayout(jLayeredPane2);
         jLayeredPane2.setLayout(jLayeredPane2Layout);
@@ -150,11 +156,6 @@ public class FrmLogin extends javax.swing.JFrame {
                 .addComponent(lblCapslock, javax.swing.GroupLayout.PREFERRED_SIZE, 23, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(40, Short.MAX_VALUE))
         );
-        jLayeredPane2.setLayer(jLabel1, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(txtUsuario, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(jLabel4, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(txtSenha, javax.swing.JLayeredPane.DEFAULT_LAYER);
-        jLayeredPane2.setLayer(lblCapslock, javax.swing.JLayeredPane.DEFAULT_LAYER);
 
         getContentPane().add(jLayeredPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 100, 290, 180));
 
